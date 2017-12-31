@@ -19,7 +19,8 @@ export class HomePage {
     this.getPriceProvider.getPrice().
       then( data => {
         this.data = data;
-        console.log(data);
+        // console.log(data);
+        // console.log(this.data);
       });
    }
 

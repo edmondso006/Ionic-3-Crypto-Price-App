@@ -73,10 +73,13 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_7d / 100
+    let decimal = this.currency.percent_change_7d / 100;
     console.log("Decimal: " + decimal );
+    let absDecimal = Math.abs(decimal);
+    console.log("ABS Decimal " + absDecimal);
+    
 
-    let change = decimal * this.currency.price_usd;
+    let change = absDecimal * this.currency.price_usd;
     console.log("Change: " + change);
     
     if(neg == true){
@@ -94,7 +97,7 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_24h / 100
+    let decimal = this.currency.percent_change_24h / 100;
     console.log("Decimal: " + decimal );
 
     let change = decimal * this.currency.price_usd;
@@ -116,7 +119,7 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_1h / 100
+    let decimal = this.currency.percent_change_1h / 100;
     console.log("Decimal: " + decimal );
 
     let change = decimal * this.currency.price_usd;
