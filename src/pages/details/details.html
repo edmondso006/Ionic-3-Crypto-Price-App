@@ -1,0 +1,76 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <img class="image" src="../../assets/Utils/{{currency.symbol}}.PNG">
+  <br />
+
+  <ion-card>
+    <ion-card-header>
+      <span class="title">{{currency.name}}</span>
+    </ion-card-header>
+
+    <ion-card-content padding>
+      <span class="subTitle">Price USD: </span> 
+      <span class="subDetail">{{currency.price_usd |  currency:'USD':true:'1.2-2'}}</span>
+
+      <br />
+
+      <span class="subTitle">Price BTC: </span>
+      <span class="subDetail">{{currency.price_btc}}</span>
+
+      <br />
+
+      <span class="subTitle">Available Supply: </span>
+      <span class="subDetail">{{currency.available_supply}}</span>
+
+      <br />
+
+      <span class="subTitle">Market Cap USD: </span>
+      <span class="subDetail">{{currency.market_cap_usd | currency:'USD':true:'1.2-2'}}</span>
+
+      <br />
+
+      <span class="subTitle">Percent Change 1 Hour: </span>
+      <span class="subDetail">{{currency.percent_change_1h}}</span>
+
+    
+      <br />
+
+      <span class="subTitle">Percent Change 24 Hours: </span>
+      <span class="subDetail">{{currency.percent_change_24h}}</span>
+
+      <br />
+
+      <span class="subTitle">Percent Change 7 Days: </span>
+      <span class="subDetail">{{currency.percent_change_7d}}</span>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+
+      <ion-card-header>
+        <span class="historyTitle">Price History</span>
+      </ion-card-header>
+    
+      <ion-card-content>
+          <canvas #lineCanvas></canvas>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

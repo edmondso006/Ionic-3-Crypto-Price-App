@@ -1,0 +1,35 @@
+page-details {
+
+    .image{
+        display: block;
+        margin: auto;
+        height: 128px;
+        width: 128px;
+    }
+
+    .title{
+        color: black;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .subTitle{
+        color: black;
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .subDetail{
+        color: #6b6b6b;
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .historyTitle{
+        color: black;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
