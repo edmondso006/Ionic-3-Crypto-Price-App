@@ -73,20 +73,19 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_7d / 100;
-    console.log("Decimal: " + decimal );
-    let absDecimal = Math.abs(decimal);
-    console.log("ABS Decimal " + absDecimal);
-    
 
+    console.log(neg);
+
+    let decimal = this.currency.percent_change_7d / 100;
+    let absDecimal = Math.abs(decimal);
     let change = absDecimal * this.currency.price_usd;
-    console.log("Change: " + change);
     
     if(neg == true){
-      this.week = this.currency.price_usd - change;
+      this.week = parseInt(this.currency.price_usd) + change;
     }else{
-      this.week = this.currency.price_usd + change;
+      this.week = parseInt(this.currency.price_usd) - change;
     }
+
     console.log(this.week);
   }
 
@@ -97,18 +96,19 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_24h / 100;
-    console.log("Decimal: " + decimal );
 
-    let change = decimal * this.currency.price_usd;
+    console.log(neg);
+    
+    let decimal = this.currency.percent_change_24h / 100;
+    let absDecimal = Math.abs(decimal);
+    let change = absDecimal * this.currency.price_usd;
     console.log("Change: " + change);
     
     if(neg == true){
-      this.day = this.currency.price_usd - change;
+      this.day = parseInt(this.currency.price_usd) - change;
     }else{
-      this.day = this.currency.price_usd + change;
+      this.day = parseInt(this.currency.price_usd) + change;
     }
-    console.log(this.day);
 
   }
 
@@ -119,18 +119,16 @@ export class DetailsPage {
     }else{
        neg = true;
     }
-    let decimal = this.currency.percent_change_1h / 100;
-    console.log("Decimal: " + decimal );
 
-    let change = decimal * this.currency.price_usd;
-    console.log("Change: " + change);
-    
+    let decimal = this.currency.percent_change_1h / 100;
+    let absDecimal = Math.abs(decimal);
+    let change = absDecimal * this.currency.price_usd;
+
     if(neg == true){
-      this.hour = this.currency.price_usd - change;
+      this.hour = parseInt(this.currency.price_usd) - change;
     }else{
-      this.hour = this.currency.price_usd + change;
+      this.hour = parseInt(this.currency.price_usd) + change;
     }
-    console.log(this.hour);
   }
 
 
